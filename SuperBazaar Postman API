@@ -1,0 +1,2470 @@
+{
+	"info": {
+		"_postman_id": "b9a14131-498b-42ff-bce5-443b56f9416d",
+		"name": "SuperBazaar Amit Sir",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10359413"
+	},
+	"item": [
+		{
+			"name": "https://blog-backend.mastersindia.co/api/v1/custom/search/gstin/?keyword=24ABWPT3630N1ZX&unique_id=04lq6nt3o6BQp7syoUmoRnVgxIlXEg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blog-backend.mastersindia.co/api/v1/custom/search/gstin/?keyword=24ABWPT3630N1ZX&unique_id=04lq6nt3o6BQp7syoUmoRnVgxIlXEg",
+					"protocol": "https",
+					"host": [
+						"blog-backend",
+						"mastersindia",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"custom",
+						"search",
+						"gstin",
+						""
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "24ABWPT3630N1ZX"
+						},
+						{
+							"key": "unique_id",
+							"value": "04lq6nt3o6BQp7syoUmoRnVgxIlXEg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\": \"Dharmesh Setblue\",\r\n    \"email\": \"setblue.dharmesh1@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"gender\": \"\",\r\n    \"dob\": \"\",\r\n    \"username\": \"\",\r\n    \"phoneCountryCode\": \"\",\r\n    \"phoneNumber\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/register",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginFrom\": \"manually\",\r\n    \"username\": \"setblue.dharmesh1@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"socialAuthId\": \"\",\r\n    \"email\": \"\",\r\n    \"fullname\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/login",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Verify Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6399721cbea449bc84129ae4\",\r\n    \"email\": \"setblue.dharmesh1@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/verify/account",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"verify",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Profile Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/profile",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Edit/Save Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\": \"Dharmesh Setblue\",\r\n    \"email\": \"setblue.dharmesh2@gmail.com\",\r\n    \"gender\": \"female\",\r\n    \"dob\": \"1991-09-16\",\r\n    \"username\": \"dharmeshSavaliya\",\r\n    \"phoneCountryCode\": \"+91\",\r\n    \"phoneNumber\": \"8490073093\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/profile/edit",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"profile",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Change Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentPassword\": \"1234\",\r\n    \"newPassword\": \"123\",\r\n    \"confirmPassword\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/changepassword",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzk5NzI3OWJlYTQ0OWJjODQxMjlhZWEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY3MTAwMDgzNiwiZXhwIjoxNjczNTkyODM2fQ.QMmaC-qLDmb1295sSXgVELUmKoqHfoWaBhnBUuhhBM4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/refreshtoken",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"refreshtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzk2YzYwMWYyN2NkOWNjMTVjNTEwNDciLCJpYXQiOjE2NzA4NDQ3MzEsImV4cCI6MTcwMjQwMjMzMX0.1IiKHnF0pulVl6GbZjMhsTkJcl2iLmpf5IN9BSmXAQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzk5NzI3OWJlYTQ0OWJjODQxMjlhZWEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY3MTAwMDgzNiwiZXhwIjoxNjczNTkyODM2fQ.QMmaC-qLDmb1295sSXgVELUmKoqHfoWaBhnBUuhhBM4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/logout",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "=======  Admin  ========",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin: Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin@superbazaar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/admin/login",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin: Profile Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/admin/profile",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"admin",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin: Change Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentPassword\": \"admin@superbazaar\",\r\n    \"newPassword\": \"admin@superbazaar\",\r\n    \"confirmPassword\": \"admin@superbazaar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/admin/changepassword",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"admin",
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin: Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2E1OWUwZDFkOGI5YTY2ZmMxZTg3NzAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzIwMzQxNTIsImV4cCI6MTY3NDYyNjE1Mn0.x7ldGVIlDPK4eQvuB-LZwW121HYdoc1HQP6b4zwT3oc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/admin/refreshtoken",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"admin",
+						"refreshtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin: Logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2E1OWUwZDFkOGI5YTY2ZmMxZTg3NzAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzIwMzQxNTIsImV4cCI6MTY3NDYyNjE1Mn0.x7ldGVIlDPK4eQvuB-LZwW121HYdoc1HQP6b4zwT3oc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/admin/logout",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"admin",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "======  Business  =======",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business: List of Types",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}api/business/list",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"business",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business: Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/business/create",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"business",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "======  Settings  =======",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Settings: Business Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/settings/business/info",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"settings",
+						"business",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Settings: Business",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"632da5c52ae0801ff7c2a107\",\r\n    \"visibleOption\": \"\",\r\n    \"minimumPieces\": \"\",\r\n    \"minimumCart\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/settings/business/save",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"settings",
+						"business",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "======  Menu  =======",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu: List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/menu/list",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"menu",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu: Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Mega Menu Filter1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/menu/create",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"menu",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "======  Category  =======",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: All (Frontend)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/category/all",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/category/list",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Readymade",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Dharmesh/Pictures/saree1.jpg"
+						},
+						{
+							"key": "description",
+							"value": "This is description about Readymade products.",
+							"type": "text"
+						},
+						{
+							"key": "menu",
+							"value": "62dfad807338cd1d84a4b01b",
+							"description": "62dfad807338cd1d84a4b01b (Simple Category)\n62dfd88717b20e0d78f24ff1 (Multi Level Category)\n62dfd89c17b20e0d78f24ff4 (Mega Menu Filter)",
+							"type": "text"
+						},
+						{
+							"key": "megaMenuFilters",
+							"value": "",
+							"description": "Required when menu is 62dfd89c17b20e0d78f24ff4 (Mega Menu Filter)",
+							"type": "text"
+						},
+						{
+							"key": "metaTitle",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "metaKeyword",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "metaDescription",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "true",
+							"description": "Active: true, Inactive: false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}api/category/create",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: Fetch by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/category/63aeaaaaa2319d0106b6fdfb",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category",
+						"63aeaaaaa2319d0106b6fdfb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Readymade",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Dharmesh/Pictures/saree1.jpg"
+						},
+						{
+							"key": "description",
+							"value": "This is description about Readymade products.",
+							"type": "text"
+						},
+						{
+							"key": "menu",
+							"value": "62dfad807338cd1d84a4b01b",
+							"description": "62dfad807338cd1d84a4b01b (Simple Category)\n62dfd88717b20e0d78f24ff1 (Multi Level Category)\n62dfd89c17b20e0d78f24ff4 (Mega Menu Filter)",
+							"type": "text"
+						},
+						{
+							"key": "megaMenuFilters",
+							"value": "",
+							"description": "Required when menu is 62dfd89c17b20e0d78f24ff4 (Mega Menu Filter)",
+							"type": "text"
+						},
+						{
+							"key": "metaTitle",
+							"value": "Test meta title",
+							"type": "text"
+						},
+						{
+							"key": "metaKeyword",
+							"value": "Test meta keywords",
+							"type": "text"
+						},
+						{
+							"key": "metaDescription",
+							"value": "Test meta description",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "true",
+							"description": "Active: true, Inactive: false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}api/category/63aeaaaaa2319d0106b6fdfb",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category",
+						"63aeaaaaa2319d0106b6fdfb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: Status (Active/Inactive)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\"63aeaaaaa2319d0106b6fdfb\"],\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/category/status",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/category/63aeaaaaa2319d0106b6fdfb",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category",
+						"63aeaaaaa2319d0106b6fdfb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category: Delete Selected",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\"63aeaaaaa2319d0106b6fdfb\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/category",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "======  Subcategory  =======",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subcategory: List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/subcategory/list/62fa339d008e1522283148a1",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"subcategory",
+						"list",
+						"62fa339d008e1522283148a1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subcategory: Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"62fa339d008e1522283148a1\",\r\n    \"name\": \"Test Printed Sarees\",\r\n    \"description\": \"This is description about test printed sarees products.\",\r\n    \"metaTitle\": \"Meta title\",\r\n    \"metaKeyword\": \"Meta keyword\",\r\n    \"metaDescription\": \"Meta Description\",    \r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/subcategory/create",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"subcategory",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subcategory: Fetch by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/subcategory/62fdc8443e004903ac958677",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"subcategory",
+						"62fdc8443e004903ac958677"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subcategory: Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"name\": \"Test Printed Sarees\",\r\n    \"description\": \"This is description about test printed sarees products.\",\r\n    \"metaTitle\": \"Meta title\",\r\n    \"metaKeyword\": \"Meta keyword\",\r\n    \"metaDescription\": \"Meta Description\",    \r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/subcategory/631067e417f50ba187c6d37c",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"subcategory",
+						"631067e417f50ba187c6d37c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subcategory: Status (Active/Inactive) Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\"631067e417f50ba187c6d37c\"],\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/subcategory/status",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"subcategory",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subcategory: Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}api/subcategory/6310727cc75bacc1975ecd0a",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"subcategory",
+						"6310727cc75bacc1975ecd0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subcategory: Delete Selected",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\"6310727cc75bacc1975ecd0a\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/subcategory",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"subcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "=====  Attribute Set  ======",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute Set: List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/attributeset/list",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attributeset",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute Set: Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sarees\",\r\n    \"attributes\": [\"63109f7a3de0c14f03bdd23a\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/attributeset/create",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attributeset",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute Set: Fetch by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/attributeset/6352713391662d4f2b743be2",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attributeset",
+						"6352713391662d4f2b743be2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute Set: Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"name\": \"Sarees\",\r\n    \"attributes\": [\"62fb76d114ca9b288cbe3585\",\"62fb76d114ca9b288cbe3585\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/attributeset/6310503172cdf4a9351a1b2d",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attributeset",
+						"6310503172cdf4a9351a1b2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute Set: Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/attributeset/6310503172cdf4a9351a1b2d",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attributeset",
+						"6310503172cdf4a9351a1b2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute Set: Delete Selected",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\"631048362fa1de0ac8860f66\", \"63104f9ed8be4539b49c6529\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/attributeset",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attributeset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "=======  Attribute  ========",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute: All (Frontend)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/attribute/list",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attribute",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute: List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/attribute/all",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attribute",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute: Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ocassion\",\r\n    \"values\": [\"Casual\",\"Casual\",\"Festival\",\"Festive\",\"Function\",\"Party\",\"Sangeet\",\"Wedding\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/attribute/create",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attribute",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute: Fetch by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/attribute/63109f7a3de0c14f03bdd23a",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attribute",
+						"63109f7a3de0c14f03bdd23a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute: Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ocassion\",\r\n    \"values\": [\"Casual\",\"Casual\",\"Festival\",\"Festive\",\"Function\",\"Party\",\"Sangeet\",\"Wedding\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/attribute/63109f7a3de0c14f03bdd23a",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attribute",
+						"63109f7a3de0c14f03bdd23a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute: Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/attribute/63109d8fa797d03530e690f8",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attribute",
+						"63109d8fa797d03530e690f8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute: Delete Selected",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\"63109f3a3de0c14f03bdd231\", \"63109f3a3de0c14f03bdd231\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/attribute",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"attribute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "======  Products  =======",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product: All (Frontend)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/product/list",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"product",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product: List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}api/product/all",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"product",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product: Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcxMDU5OTIsImV4cCI6MTY4ODY2MzU5Mn0.q-l5G-AYF-1arNwQKqgZG9Gjhu2TyloTErVQdfX0k0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attributeSet",
+							"value": "6352713391662d4f2b743be2",
+							"type": "text"
+						},
+						{
+							"key": "allAttributesInfo",
+							"value": "{\"ocassion\": \"Casual\"}",
+							"type": "text"
+						},
+						{
+							"key": "categories",
+							"value": "[\"62fa3384008e15222831489e\"]",
+							"type": "text"
+						},
+						{
+							"key": "subcategories",
+							"value": "[\"62fb76d114ca9b288cbe3585\"]",
+							"type": "text"
+						},
+						{
+							"key": "sku",
+							"value": "423423542dfdsfew67",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Test Product 2",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/Dharmesh/Pictures/saree3.jpg"
+						},
+						{
+							"key": "isCatalog",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000.50",
+							"type": "text"
+						},
+						{
+							"key": "assortedPrice",
+							"value": "1200.50",
+							"type": "text"
+						},
+						{
+							"key": "singlePrice",
+							"value": "1500.50",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Test Description",
+							"type": "text"
+						},
+						{
+							"key": "description2",
+							"value": "Test Description 2.",
+							"type": "text"
+						},
+						{
+							"key": "metaTitle",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "metaKeyword",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "metaDescription",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}api/product/create",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product: Import Sheet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "importfile",
+							"type": "file",
+							"src": "/F:/Dharmesh/nodeprojects/superbazaar/superbazaar products excel.xls"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}api/importsheet",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"importsheet"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "Superbazaar Admin Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM0MWY1NmEyMTg2ZGQ1ZTVkZjI0NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTcwMjI1MTUsImV4cCI6MTY4ODU4MDExNX0.F7gCn1tOJqiFpUDJEVG7fHBYPw_PR5SqEazJwVUKa10"
+		}
+	]
+}

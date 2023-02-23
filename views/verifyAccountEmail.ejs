@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="address=no;email=no;telephone=no" />
+    <title>
+        <%= subject %>
+    </title>
+    <style type="text/css">
+        body {
+            font-family: "convection-medium", sans-serif;
+            text-align: center;
+        }
+        
+        .container {
+            height: 100%;
+            width: 98%;
+            background: #ecf6eb;
+            border: 1px solid #e3e3e3;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .logo-container {
+            text-align: center;
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .message-container {
+            text-align: center;
+            max-width: 500px;
+            display: inline-block;
+        }
+        
+        .mtb-30 {
+            margin-top: 30px;
+        }
+        
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+        
+        .btn-verify {
+            background-color: #00c3ff;
+            border: none;
+            border-radius: 5px;
+            color: white !important;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            max-width: 200px;
+        }
+        
+        .text-bold {
+            font-weight: bold;
+        }
+        
+        .text-color {
+            color: #6a6868e0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="/images/logo.png" alt="logo" style="width:180px;border-radius:5px;" />
+            <!-- <img src="https://www.superbazaar.in/images/logo.png" alt="logo" style="border-radius:5px;" /> -->
+        </div>
+        <div class="message-container mb-30">
+            <h2>Verify your email address</h2>
+            <div>
+                <h4>Hi
+                    <%= fullname %>,</h4>
+                <p class="text-bold text-color">We're happy you signed up for
+                    <%= systemName %>. Please confirm your e-mail address by clicking on below button or use this link
+                        <a href="<%= link %>">
+                            <%= link %>
+                        </a>.</p>
+                <div class="mtb-30">
+                    <a href="<%= link %>" class="btn-verify text-bold text-color">Verify your email</a>
+                </div>
+                <div class="mtb-30 text-color">
+                    <b>Thanks and Regards,</b>
+                    <br />
+                    <%= systemName %> Team
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

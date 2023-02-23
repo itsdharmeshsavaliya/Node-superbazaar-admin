@@ -1,0 +1,45 @@
+{
+    "name": "rest-apis",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "olddev": "nodemon -r esm server.js",
+        "olddev1": "nodemon server.js --exec babel-node --presets es2015,stage-2",
+        "dev": "nodemon --exec babel-node server.js",
+        "start": "NODE_ENV=production node -r esm server.js"
+    },
+    "keywords": [],
+    "author": "Dharmesh",
+    "license": "MIT",
+    "dependencies": {
+        "@joi/date": "^2.1.0",
+        "bcrypt": "^5.0.1",
+        "body-parser": "^1.20.0",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "csvtojson": "^2.0.10",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.8",
+        "esm": "^3.2.25",
+        "express": "^4.17.1",
+        "joi": "^17.6.0",
+        "joi-objectid": "^4.0.2",
+        "joi-phone-number": "^5.1.1",
+        "jsonwebtoken": "^8.5.1",
+        "moment": "^2.29.4",
+        "mongoose": "^6.5.4",
+        "multer": "^1.4.2",
+        "node-fetch": "^2.6.7",
+        "nodemailer": "^6.8.0",
+        "underscore": "^1.13.4",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.19.3",
+        "@babel/core": "^7.20.5",
+        "@babel/node": "^7.20.5",
+        "@babel/preset-env": "^7.20.2",
+        "nodemon": "^2.0.7"
+    }
+}

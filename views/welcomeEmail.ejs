@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="address=no;email=no;telephone=no" />
+    <title>
+        <%= subject %>
+    </title>
+    <style type="text/css">
+        body {
+            font-family: "convection-medium", sans-serif;
+            text-align: -webkit-center;
+        }
+        
+        .container {
+            height: 100%;
+        }
+        
+        .logo-container {
+            text-align: center;
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .message-container {
+            background: #ecf6eb;
+            border: 1px solid #e3e3e3;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 20px 0px 20px 0px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="message-container">
+            <div class="logo-container">
+                <img src="/images/logo.png" alt="logo" style="width:180px;border-radius:5px;" />
+                <!-- <img src="https://www.superbazaar.in/images/logo.png" alt="logo" style="border-radius:5px;" /> -->
+            </div>
+            <div class="text-center mb-30">
+                <p>
+                    <h2>Welcome to
+                        <%= systemName %>
+                    </h2>
+                </p>
+                <p>
+                    <h3>Dear
+                        <%= fullname %>,</h3>
+                </p>
+                <p>Greetings from
+                    <%= systemName %>
+                </p>
+                <p>Thank you for signing up to our
+                    <%= systemName %> application. </p>
+                <p>
+                    Use the following values when prompted to log in:
+                    <br>
+                    <b>Email:</b>
+                    <%= email %>
+                </p>
+                <p>
+                    <b>Thanks and Regards,</b>
+                    <br>
+                    <%= systemName %> Team
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

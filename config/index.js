@@ -1,0 +1,28 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+export const {
+    APP_PORT,
+    APP_URL,
+    DEBUG_MODE,
+    DB_URL,
+
+    JWT_SECRET,
+    REFRESH_SECRET,
+    JWT_EXPIRES_IN,
+    JWT_REFRESH_EXPIRES_IN,
+
+    SAVE_JWT_TOKEN_IN_COOKIE,
+    JWT_COOKIE_NAME,
+    JWT_ADMIN_COOKIE_NAME,
+    JWT_COOKIE_EXPIRES_IN,
+
+    SMTP_EMAIL,
+    SMTP_PASSWORD,
+
+    IS_ADMIN_MULTI_DEVICE_LOGIN,
+    IS_USER_MULTI_DEVICE_LOGIN,
+
+    ERROR_IN_ARRAY,
+    SALT_FACTOR
+} = process.env;
